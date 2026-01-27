@@ -98,7 +98,7 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background relative">
+    <section id="skills" className="py-24 bg-background relative">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="text-center mb-16 animate-fade-up">
           <p className="text-primary font-mono text-sm tracking-wider uppercase mb-4">
