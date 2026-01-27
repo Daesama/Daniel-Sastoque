@@ -1,8 +1,14 @@
-import { MapPin, Phone, Mail, Linkedin, Github, Download } from "lucide-react";
+import { MapPin, Phone, Mail, Linkedin, Github, Download, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profileImage from "@/assets/profile.jpg";
 
 const HeroSection = () => {
+  const scrollToSkills = () => {
+    const skillsSection = document.getElementById('skills');
+    if (skillsSection) {
+      skillsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section className="min-h-screen bg-gradient-hero flex items-center relative overflow-hidden">
       {/* Background decoration */}
@@ -99,6 +105,15 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Scroll down button */}
+      <button 
+        onClick={scrollToSkills}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 p-3 glass rounded-full animate-bounce hover:bg-secondary/80 transition-colors cursor-pointer"
+        aria-label="Scroll to skills section"
+      >
+        <ChevronDown className="w-6 h-6 text-primary" />
+      </button>
     </section>
   );
 };
