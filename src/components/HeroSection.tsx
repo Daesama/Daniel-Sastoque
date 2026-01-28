@@ -79,9 +79,14 @@ const HeroSection = () => {
             </div>
 
             <div className="animate-fade-up-delay-4">
-              <Button className="bg-gradient-primary text-primary-foreground font-semibold px-8 py-6 text-base shadow-glow hover:opacity-90 transition-opacity">
-                <Download className="w-5 h-5 mr-2" />
-                Descargar CV
+              <Button 
+                asChild
+                className="bg-gradient-primary text-primary-foreground font-semibold px-8 py-6 text-base shadow-glow hover:opacity-90 transition-opacity"
+              >
+                <a href="/Daniel-Sastoque/CV_Daniel_Esteban_Sastoque.pdf" download>
+                  <Download className="w-5 h-5 mr-2" />
+                  Descargar CV
+                </a>
               </Button>
             </div>
           </div>
